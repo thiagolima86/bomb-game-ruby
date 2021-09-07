@@ -1,6 +1,6 @@
 class Feedback
-  def initialize(computer_num, user_num)
-    @computer_num = computer_num.split('')
+  def initialize(number, user_num)
+    @computer_num = number.reveal.split('')
     @user_num = user_num.split('')
     @dot = '•'
     @checked = '✓'
@@ -16,10 +16,10 @@ class Feedback
 
   def match_each
     match = []
-    computer_num.each_with_index do |value, index|
-      if user_num[index] == value
+    user_num.each_with_index do |value, index|
+      if computer_num[index] == value
         match.prepend(checked)
-      elsif user_num.any? value
+      elsif computer_num.any? value
         match.append(dot)
       end
     end
