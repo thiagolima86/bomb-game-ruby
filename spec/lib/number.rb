@@ -4,7 +4,6 @@ RSpec.describe Number do
   subject { described_class.new(size).create }
   context "when number size is 5" do
     let(:size) { 5 }
-    it { expect(subject.generate).to eq [1, 2, 3, 4, 5] }
     it { expect(subject.reveal).to eq 12345.to_s }
     it { expect(subject.locked).to eq "*****" }
   end

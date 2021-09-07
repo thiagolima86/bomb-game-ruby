@@ -8,18 +8,12 @@ class Number
     self
   end
 
-  def generate
-    number
-  end
-
   def reveal
     number.join
   end
 
   def locked
-    value = ''
-    size.times{ value += '*' }
-    value
+    number.fill('*').join
   end
 
   def eq?(value)
