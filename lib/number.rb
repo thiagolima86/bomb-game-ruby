@@ -1,4 +1,6 @@
 class Number
+  attr_reader :size, :number
+
   def initialize(size)
     @size = size
   end
@@ -21,8 +23,6 @@ class Number
   end
 
   private
-
-  attr_reader :size, :number
 
   def create_rand
     number = []
