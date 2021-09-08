@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Validate numbers inputed
 class InputValidate
   def initialize(number, user_num)
     @size = number.size
@@ -26,23 +29,14 @@ class InputValidate
   end
 
   def empty_number?
-    if user_num.empty?
-      @message = 'Is not permited empty'
-      true
-    end
+    return @message = 'Is not permited empty' if user_num.empty?
   end
 
   def size_invalid?
-    if size != user_num.length
-      @message = 'The number size is incorrect'
-      true
-    end
+    return @message = 'The number size is incorrect' if size != user_num.length
   end
 
   def type_invalid?
-    if /[^0-9]/.match?(user_num)
-      @message = 'The type number is incorrect'
-      true
-    end
-  end  
+    return @message = 'The type number is incorrect' if /[^0-9]/.match?(user_num)
+  end
 end
