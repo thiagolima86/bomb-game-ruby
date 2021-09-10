@@ -1,4 +1,14 @@
 pt_br:
   ask_to_play: "\n Entre com [h] aprender a jogar ou [p] para jogar: "
-  mission1: "Um terrorista colocou uma bomba em um shopping em Fortaleza, Brasil. Você faz parte do esquadrão anti-bomba e foi convocado
+  mission_1: "\nUm terrorista colocou uma bomba em um shopping em Fortaleza, Brasil. Você faz parte do esquadrão anti-bomba e foi convocado
 para desarmá-lo. Use suas habilidades para desarmar a bomba e salvar pessoas"
+  discovery_code: "\n\nVocê precisa descobrir esse código: "
+  help: "\nVocê deve desarmar a bomba digitando um codigo numerico. Esse o número de digitos é informado.
+Valores inválidos não são contabilizados. Você tem direito a x tentativas.
+\nA cada tentativa o programa vai dar um feedback atravez de simbolos. 
+[•] significa que existe esse digito no código, mas que ele está em outra posição. 
+[✓] significa que tem 1 digito certo e no lugar.
+\nVocê desarma a bomba quando acertar o numero todo. "
+  enter_to_play: "\n[Enter] para jogar: "
+  you_win: "\nVocê ganhou!"
+  you_lose: "\nVocê perdeu, a bomba explodiu :("

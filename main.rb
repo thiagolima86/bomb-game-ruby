@@ -16,7 +16,7 @@ puts "
 
 def talk(text)
   text.split('').each do |letter|
-     sleep(0.02); print letter
+    sleep(0.02); print letter
   end
 end
 
@@ -30,32 +30,24 @@ lang = gets.chomp
 
 I18n.locale = :pt_br if lang == '1'
 
+
 talk I18n.t(:ask_to_play)
 command = gets.chomp
 
-
 if command == 'h'
   system('tput cuu1; tput dl1')
-  puts "\nVocê deve desarmar a bomba digitando um codigo numerico. Esse o número de digitos é informado.
-Valores inválidos não são contabilizados. Você tem direito a x tentativas.
+  talk I18n.t(:help)
 
-A cada tentativa o programa vai dar um feedback atravez de simbolos. 
-\n[•] significa que existe esse digito no código, mas que ele está em outra posição. 
-[✓] significa que tem 1 digito certo e no lugar.
-\n
-Você desarma a bomba quando acertar o numero todo. "
-
-  print "\n[Enter] to play: "
+  talk I18n.t(:enter_to_play)
   gets.chomp
 end
 
-talk "\nA terrorist placed a bomb in a mall in Fortaleza Brazil. You are part of the bomb squad and have been called
-in to disarm it. Use your skills to defuse the bomb and save people."
+talk I18n.t(:mission_1)
 
-print "\n\nYou need discovery this number: "
-
+talk I18n.t(:discovery_code)
 puts number.locked
-puts number.reveal
+
+# puts number.reveal
 
 
 user_num = nil
@@ -67,9 +59,8 @@ feedback = nil
   break if number.eq? user_num
 end
 
-
 if number.eq? user_num
-  puts "\nYou Win! #{feedback}"
+  puts "#{I18n.t(:you_win)} #{feedback}"
 else
-  puts "\nYou Lost"
+  puts I18n.t(:you_lost)
 end
