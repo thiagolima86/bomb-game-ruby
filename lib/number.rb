@@ -15,7 +15,9 @@ class Number
   end
 
   def locked
-    number.fill('*').join
+    mask = ''
+    size.times{ mask += '*' }
+    mask
   end
 
   def eq?(value)

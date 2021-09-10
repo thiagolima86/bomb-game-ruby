@@ -67,6 +67,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   byebug
+  i18n
   rake
   rspec!
   rspec-core!
