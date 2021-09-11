@@ -29,14 +29,14 @@ class InputValidate
   end
 
   def empty_number?
-    return @message = 'Is not permited empty' if user_num.empty?
+    return @message = I18n.t('validate.empty_invalid') if user_num.empty?
   end
 
   def size_invalid?
-    return @message = 'The number size is incorrect' if size != user_num.length
+    return @message = I18n.t('validate.size_incorrect') if size != user_num.length
   end
 
   def type_invalid?
-    return @message = 'The type number is incorrect' if /[^0-9]/.match?(user_num)
+    return @message = I18n.t('validate.type_incorrect') if /[^0-9]/.match?(user_num)
   end
 end

@@ -1,58 +1,23 @@
 require './config/load.rb'
 
+App.title
+
+Configure.lang
+# Configure.options
+
+talk I18n.t('mission_1.title')
+sleep(3)
+talk I18n.t('mission_1.description')
+
 number = Number.new(3).create
+attempts = 10
 
-puts "
-☆┌─┐　─┐☆
-　│▒│ /▒/
-　│▒│/▒/
-　│▒ /▒/─┬─┐
-　│▒│▒|▒│▒│
-┌┴─┴─┐-┘─┘
-│▒┌──┘▒▒▒│
-└┐▒▒▒▒▒▒┌┘
-　└┐▒▒▒▒┌
-"
-
-def talk(text)
-  text.split('').each do |letter|
-    sleep(0.02); print letter
-  end
-end
-
-puts "Disarm bomb!"
-
-puts "\n[0] English"
-puts "[1] Portuguese"
-print "\nChoose your language: "
-
-lang = gets.chomp
-
-I18n.locale = :pt_br if lang == '1'
-
-
-talk I18n.t(:ask_to_play)
-command = gets.chomp
-
-if command == 'h'
-  system('tput cuu1; tput dl1')
-  talk I18n.t(:help)
-
-  talk I18n.t(:enter_to_play)
-  gets.chomp
-end
-
-talk I18n.t(:mission_1)
-
-talk I18n.t(:discovery_code)
+talk I18n.t(:discovery_code, attempts: attempts, size: number.size)
 puts number.locked
-
-# puts number.reveal
-
 
 user_num = nil
 feedback = nil
-1..10.times do
+1..attempts.times do
   user_num = InputNumber.new(number).request
   feedback = Feedback.new(number, user_num).call
   puts "| #{user_num} |  #{feedback} |"

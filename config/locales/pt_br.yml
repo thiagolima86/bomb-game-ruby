@@ -1,14 +1,21 @@
 pt_br:
-  ask_to_play: "\n Entre com [h] aprender a jogar ou [p] para jogar: "
-  mission_1: "\nUm terrorista colocou uma bomba em um shopping em Fortaleza, Brasil. Você faz parte do esquadrão anti-bomba e foi convocado
-para desarmá-lo. Use suas habilidades para desarmar a bomba e salvar pessoas"
-  discovery_code: "\n\nVocê precisa descobrir esse código: "
-  help: "\nVocê deve desarmar a bomba digitando um codigo numerico. Esse o número de digitos é informado.
-Valores inválidos não são contabilizados. Você tem direito a x tentativas.
-\nA cada tentativa o programa vai dar um feedback atravez de simbolos. 
-[•] significa que existe esse digito no código, mas que ele está em outra posição. 
-[✓] significa que tem 1 digito certo e no lugar.
-\nVocê desarma a bomba quando acertar o numero todo. "
+  ask_to_play: "\nEntre com [h] para ajuda, [s] para configurações ou [enter] para jogar: "
+  discovery_code: "\n\nVocê tem  %{attempts} tentativas para descobrir o código de %{size} digitos: "
   enter_to_play: "\n[Enter] para jogar: "
   you_win: "\nVocê ganhou!"
   you_lose: "\nVocê perdeu, a bomba explodiu :("
+  write_number: "\nEscreva um número com %{size} digitos: "
+  validate:
+    empty_invalid: 'Não é permitido vazio'
+    size_incorrect: 'O tamanho do número está incorreto'
+    type_incorrect: 'O tipo do número está incorreto'
+  help: "
+  \nVocê deve desarmar a bomba digitando um codigo numérico. Esse o número de digitos será
+\ninformado. Valores inválidos não são contabilizados. Você tem direito a x tentativas.
+\n\nA cada tentativa o programa vai dar um feedback atravez de simbolos. 
+\n[•] significa que existe esse digito no código, mas que ele está em outra posição. 
+\n[✓] significa que tem 1 digito certo e no lugar.
+\n\nVocê desarma a bomba quando acertar o numero todo. \n\n"
+  mission_1:
+    title: "\nMissão 1" 
+    description: "\nUm terrorista colocou uma bomba em um shopping em Fortaleza, Brasil. Você faz parte doesquadrão anti-bomba e foi convocadopara desarmá-lo. Use suas habilidades para desarmar a bomba e salvar pessoas"

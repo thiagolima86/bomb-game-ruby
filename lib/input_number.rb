@@ -31,7 +31,7 @@ class InputNumber
   end
 
   def ask_to_user
-    print "Write one number with #{number.size} digits: "
+    print I18n.t(:write_number, size: number.size)
     user_num = gets.chomp
     remove_line
     user_num

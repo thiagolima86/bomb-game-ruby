@@ -1,14 +1,20 @@
 en:
-  ask_to_play: "\nEnter [h] to learn how to play or [p] to play: "
-  mission_1: "\nA terrorist placed a bomb in a mall in Fortaleza Brazil. You are part of the bomb squad and have been called
-in to disarm it. Use your skills to defuse the bomb and save people."
-  discovery_code: "\n\nYou need discovery this code: "
-  help: "\nYou must defuse the bomb by entering a numeric code. This number of digits is informed.
-Invalid values are not counted. You are entitled to x attempts.
-\nAt each attempt the program will give feedback through symbols.
-[•] means that this digit exists in the code, but it is in another position.
-[✓] means 1 digit is right and in place.
-\nYou disarm the bomb when you hit the whole number."
+  ask_to_play: "\nEnter [h] to help, [s] to settings or [enter] to play: "
+  discovery_code: "\n\nYou have %{attempts} attempts to discovery the code with %{size} digits: "
   enter_to_play: "\n[Enter] to play: "
   you_win: "\nYou Win!"
   you_lose: "\nYou lose :("
+  write_number: "\nWrite one number with %{size} digits: "
+  validate:
+    empty_invalid: 'Is not permited empty'
+    size_incorrect: 'The number size is incorrect'
+    type_incorrect: 'The type number is incorrect'
+  help: "\nYou must defuse the bomb by entering a numeric code. This number of digits is
+\ninformed. Invalid values are not counted. You are entitled to x attempts.
+\n\nAt each attempt the program will give feedback through symbols.
+\n[•] means that this digit exists in the code, but it is in another position.
+\n[✓] means 1 digit is right and in place.
+\n\nYou disarm the bomb when you hit the whole number. \n\n"
+  mission_1: 
+    title: "\nMission 1"
+    description: "\nA terrorist placed a bomb in a mall in Fortaleza Brazil. You are part of the bomb squad and have been calledin to disarm it. Use your skills to defuse the bomb and save people."
