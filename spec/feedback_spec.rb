@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'feedback'
 
 RSpec.describe Feedback do
   subject { described_class.new(number, user_num) }

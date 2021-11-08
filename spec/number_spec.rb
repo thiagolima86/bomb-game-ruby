@@ -1,11 +1,13 @@
-require 'spec_helper'
+require 'number'
 
 RSpec.describe Number do
   subject { described_class.new(size).create }
-  context "when number size is 5" do
+
+  context 'when number size is 5' do
     let(:size) { 5 }
-    it { expect(subject.reveal).to eq 12345.to_s }
-    it { expect(subject.locked).to eq "*****" }
+
+    it { expect(subject.reveal).to eq '12345' }
+    it { expect(subject.locked).to eq '*****' }
   end
 
   context 'when verify number' do

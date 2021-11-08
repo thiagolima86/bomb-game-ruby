@@ -1,22 +1,12 @@
-# frozen_string_literal: true
-
 require 'active_support/all'
 require 'byebug'
 
 ENV['env'] = 'test'
-PROJECT_ROOT = File.expand_path('..', __dir__)
-
-
-Dir.glob(File.join(PROJECT_ROOT, 'lib', '*.rb')).each do |file|
-  autoload File.basename(file, '.rb').camelize, file
-end
-
-Dir.glob(File.join(File.dirname(__FILE__), 'lib', '*.rb')).each do |file|
-  require file
-end
 
 RSpec.configure do |config|
-
+  # rspec-expectations config goes here. You can use an alternate
+  # assertion/expectation library such as wrong or the stdlib/minitest
+  # assertions if you prefer.
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods

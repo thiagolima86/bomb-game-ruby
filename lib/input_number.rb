@@ -32,7 +32,7 @@ class InputNumber
 
   def ask_to_user
     print I18n.t(:write_number, size: number.size)
-    user_num = gets.chomp
+    user_num = $stdin.gets.chomp
     remove_line
     user_num
   end

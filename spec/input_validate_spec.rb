@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'input_validate'
 
 RSpec.describe InputValidate do
   subject { described_class.new(number, user_num) }
@@ -16,7 +16,7 @@ RSpec.describe InputValidate do
     let(:user_num) { 2345.to_s }
 
     it { expect(subject.call).to be_falsey }
-    it { expect(subject.message).to eq 'The number size is incorrect' }
+    it { expect(subject.message).to eq I18n.t('input_validate.size_incorrect') }
   end
 
   context 'when user num has caracter alphanumeric' do
@@ -24,7 +24,7 @@ RSpec.describe InputValidate do
     let(:user_num) { '23a' }
 
     it { expect(subject.call).to be_falsey }
-    it { expect(subject.message).to eq 'The type number is incorrect' }
+    it { expect(subject.message).to eq I18n.t('input_validate.type_incorrect') }
   end
 
   context 'when user num is empty' do
@@ -32,6 +32,6 @@ RSpec.describe InputValidate do
     let(:user_num) { '' }
 
     it { expect(subject.call).to be_falsey }
-    it { expect(subject.message).to eq 'Is not permited empty' }
+    it { expect(subject.message).to eq I18n.t('input_validate.empty_invalid') }
   end
 end

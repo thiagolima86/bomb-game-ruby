@@ -5,7 +5,7 @@ en:
   you_win: "\nYou Win!"
   you_lose: "\nYou lose :("
   write_number: "\nWrite one number with %{size} digits: "
-  validate:
+  input_validate:
     empty_invalid: 'Is not permited empty'
     size_incorrect: 'The number size is incorrect'
     type_incorrect: 'The type number is incorrect'

@@ -5,7 +5,7 @@ pt_br:
   you_win: "\nVocê ganhou!"
   you_lose: "\nVocê perdeu, a bomba explodiu :("
   write_number: "\nEscreva um número com %{size} digitos: "
-  validate:
+  input_validate:
     empty_invalid: 'Não é permitido vazio'
     size_incorrect: 'O tamanho do número está incorreto'
     type_incorrect: 'O tipo do número está incorreto'
